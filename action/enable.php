@@ -33,7 +33,7 @@ class action_plugin_mathjax_enable extends DokuWiki_Action_Plugin {
     public function handle_tpl_metaheader_output(Doku_Event &$event, $param) {
         // Create main config block
         $event->data['script'][] = array(
-			'type'    => 'text/x-mathjax-config',
+			'type'    => 'text/javascript',
 			'_data'   => $this->getConf('config'),
 		);
 
@@ -48,7 +48,7 @@ class action_plugin_mathjax_enable extends DokuWiki_Action_Plugin {
             $contents = file_get_contents(DOKU_INC . $f);
             if ($contents) {
                 $event->data['script'][] = array(
-                    'type'    => 'text/x-mathjax-config',
+                    'type'    => 'text/javascript',
                     '_data'   => "\n// " . $f . "\n" . $contents,
                 );
             }
@@ -59,6 +59,7 @@ class action_plugin_mathjax_enable extends DokuWiki_Action_Plugin {
 			'type'    => 'text/javascript',
 			'charset' => 'utf-8',
 			'src'     => $this->getConf('url'),
+            'async'   => 'async',
 			'_data'   => '',
 		);
     }

@@ -18,5 +18,6 @@ $conf['config'] = 'MathJax = {
     }
 };';
 $conf['configfile'] = '';
+$conf['asciimath'] = 0;
 $conf['mathtags'] = '';
 

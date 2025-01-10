@@ -12,7 +12,7 @@ $conf['config'] = 'MathJax = {
         inlineMath: [ ["$","$"], ["\\\\(","\\\\)"] ],
         displayMath: [ ["$$","$$"], ["\\\\[","\\\\]"] ],
         processEscapes: true,
-        tags: 'ams'
+        tags: "ams"
     },
     chtml: {
         scale: 1,

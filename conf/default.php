@@ -6,15 +6,19 @@
  */
 
 
-$conf['url'] = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+$conf['url'] = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
 $conf['config'] = 'MathJax = {
     tex: {
         inlineMath: [ ["$","$"], ["\\\\(","\\\\)"] ],
         displayMath: [ ["$$","$$"], ["\\\\[","\\\\]"] ],
-        processEscapes: true
+        processEscapes: true,
+        tags: 'ams'
     },
-    svg: {
-        fontCache: "global"
+    chtml: {
+        scale: 1,
+        matchFontHeight: true, 
+        mtextInheritFont: true,     
+        merrorInheritFont: true
     }
 };';
 $conf['configfile'] = '';
